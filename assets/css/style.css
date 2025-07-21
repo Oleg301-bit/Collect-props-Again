@@ -1,0 +1,98 @@
+:root {
+  --el-border: 2px solid yellow;
+}
+
+.form {
+  background-color: rgb(32, 32, 32);
+  border: var(--el-border);
+  margin: 150px auto;
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+}
+.title {
+  color: yellow;
+  text-align: center;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-field {
+  margin: 15px 10px;
+}
+input {
+  padding: 20px 30px;
+  border-radius: 25px;
+  border: var(--el-border);
+  margin: 0 10px;
+}
+
+.button {
+  padding: 20px 30px;
+  border-radius: 25px;
+  background-color: yellow;
+  color: black;
+  margin: 10px 15px;
+}
+.error-email {
+  border: 2px solid red;
+  color: red;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 20px 30px;
+  text-align: center;
+  font-weight: 20px;
+  font-size: 25px;
+}
+:root {
+  --el-border: 2px solid yellow;
+}
+
+.form {
+  background-color: rgb(32, 32, 32);
+  border: var(--el-border);
+  margin: 150px auto;
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+}
+.title {
+  color: yellow;
+  text-align: center;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-field {
+  margin: 15px 10px;
+}
+input {
+  padding: 20px 30px;
+  border-radius: 25px;
+  border: var(--el-border);
+  margin: 0 10px;
+}
+
+.button {
+  padding: 20px 30px;
+  border-radius: 25px;
+  background-color: yellow;
+  color: black;
+  margin: 10px 15px;
+}
+.error-email {
+  border: 2px solid red;
+  color: red;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 20px 30px;
+  text-align: center;
+  font-weight: 20px;
+  font-size: 25px;
+}
