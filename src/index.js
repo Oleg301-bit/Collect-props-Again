@@ -63,3 +63,22 @@ function collectProps(e) {
 }
 
 okButton.addEventListener('click', collectProps);
+
+const oPassword = document.querySelector('#passw');
+const cPassword = document.querySelector('#cPassw');
+
+const error = document.createElement('div');
+error.classList.add('error-passw');
+error.style.display = 'none';
+cPassword.insertAdjacentElement('afterend', error);
+
+function validatePassword() {
+  if (oPassword.value !== cPassword.value) {
+    error.textContent = 'Password do not match';
+    error.style.display = 'block';
+  } else {
+    error.style.display = 'none';
+  }
+}
+
+cPassword.addEventListener('input', validatePassword);
