@@ -39,27 +39,27 @@ form.appendChild(okButton);
 
 document.body.appendChild(form);
 
-const inputEmail = document.querySelector('#email');
-
 class Person {
-  constructor(fname, lname, name, email) {
-    this.fname = fname;
-    this.lname = lname;
-    this.name = name;
-    this.email = email;
+  constructor(...args) {
+    args.forEach(({ id, value }) => (this[id] = value));
   }
 }
 
-okButton.addEventListener('click', (e) => {
+function collectProps(e) {
   e.preventDefault();
+  const collectionsOfInputs = Array.from(
+    document.querySelectorAll('.input-field > input')
+  );
+  const person = new Person(...collectionsOfInputs);
+  //console.log(person);
+  const jsonPerson = JSON.stringify(
+    person,
+    (key, value) => {
+      return key === 'inputEmail' ? undefined : value;
+    },
+    2
+  );
+  localStorage.setItem(`${person.lName}`, jsonPerson);
+}
 
-  const fname = document.querySelector('#fname').value;
-  const lname = document.querySelector('#lname').value;
-  const name = document.querySelector('#name').value;
-  const email = document.querySelector('#email').value;
-
-  const person = new Person(fname, lname, name, email);
-
-  localStorage.setItem(lname.toLowerCase(), JSON.stringify(person));
-  console.log(person);
-});
+okButton.addEventListener('click', collectProps);
